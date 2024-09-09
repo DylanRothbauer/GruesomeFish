@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://diyi00raf0koe"]
+
+[node name="Game" type="Node"]
+
+[node name="Shark" type="CharacterBody2D" parent="."]
+
+[node name="Environment" type="TileMapLayer" parent="."]
+
+[node name="Start Screen" type="Container" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
