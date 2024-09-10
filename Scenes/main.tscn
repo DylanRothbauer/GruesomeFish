@@ -1,11 +1,23 @@
-[gd_scene format=3 uid="uid://diyi00raf0koe"]
+[gd_scene load_steps=3 format=3 uid="uid://diyi00raf0koe"]
+
+[ext_resource type="PackedScene" uid="uid://bljx6gjtah5uo" path="res://Scenes/shark.tscn" id="1_r5b3f"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_iy1i7"]
+distance = -217.0
 
 [node name="Game" type="Node"]
 
-[node name="Shark" type="CharacterBody2D" parent="."]
+[node name="Shark" parent="." instance=ExtResource("1_r5b3f")]
+position = Vector2(0, 30)
 
 [node name="Environment" type="TileMapLayer" parent="."]
 
 [node name="Start Screen" type="Container" parent="."]
 offset_right = 40.0
 offset_bottom = 40.0
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2(1, 51)
+shape = SubResource("WorldBoundaryShape2D_iy1i7")
