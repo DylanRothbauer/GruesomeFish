@@ -1,58 +1,92 @@
-[gd_scene load_steps=9 format=3 uid="uid://bljx6gjtah5uo"]
+[gd_scene load_steps=14 format=3 uid="uid://bljx6gjtah5uo"]
 
 [ext_resource type="Script" path="res://Scripts/shark.gd" id="1_7qyln"]
-[ext_resource type="Texture2D" uid="uid://cgeg37o7u6xyu" path="res://Art Assets/Placeholders/sharkPlaceholder.png" id="1_fih5m"]
+[ext_resource type="Texture2D" uid="uid://dj2rewex5sgth" path="res://Art Assets/Matthias/Shark-Wet_Idle_v03_VanHornMatthias.png" id="2_qaa8y"]
+[ext_resource type="Texture2D" uid="uid://dbjx7lcka4ca7" path="res://Art Assets/Matthias/Shark-Wet_Movement_v01_VanHornMatthias.png" id="3_eoat1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_0u8yo"]
-atlas = ExtResource("1_fih5m")
-region = Rect2(0, 282, 148, 141)
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3yxn"]
+atlas = ExtResource("2_qaa8y")
+region = Rect2(0, 0, 393, 157)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_dtt0o"]
-atlas = ExtResource("1_fih5m")
-region = Rect2(148, 282, 148, 141)
+[sub_resource type="AtlasTexture" id="AtlasTexture_l11fr"]
+atlas = ExtResource("2_qaa8y")
+region = Rect2(394, 0, 393, 157)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_6j8dt"]
-atlas = ExtResource("1_fih5m")
-region = Rect2(296, 282, 148, 141)
+[sub_resource type="AtlasTexture" id="AtlasTexture_23adl"]
+atlas = ExtResource("2_qaa8y")
+region = Rect2(0, 157, 393, 157)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bo0xt"]
-atlas = ExtResource("1_fih5m")
-region = Rect2(444, 282, 148, 141)
+[sub_resource type="AtlasTexture" id="AtlasTexture_bwxfj"]
+atlas = ExtResource("2_qaa8y")
+region = Rect2(394, 157, 393, 157)
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_w3tr7"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_fh3od"]
+atlas = ExtResource("3_eoat1")
+region = Rect2(0, 0, 404, 157)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g4iwf"]
+atlas = ExtResource("3_eoat1")
+region = Rect2(404, 0, 404, 157)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h3ote"]
+atlas = ExtResource("3_eoat1")
+region = Rect2(0, 157, 404, 157)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1hvid"]
+atlas = ExtResource("3_eoat1")
+region = Rect2(404, 157, 404, 157)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dkv7a"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_0u8yo")
+"texture": SubResource("AtlasTexture_t3yxn")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_dtt0o")
+"texture": SubResource("AtlasTexture_l11fr")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_6j8dt")
+"texture": SubResource("AtlasTexture_23adl")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bo0xt")
+"texture": SubResource("AtlasTexture_bwxfj")
 }],
 "loop": true,
 "name": &"default",
 "speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fh3od")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g4iwf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h3ote")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1hvid")
+}],
+"loop": true,
+"name": &"moving",
+"speed": 5.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_6irrw"]
-size = Vector2(136, 30)
+size = Vector2(317, 73)
 
 [node name="Shark" type="CharacterBody2D"]
 script = ExtResource("1_7qyln")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(0, 0.25)
+position = Vector2(0, 6)
 scale = Vector2(1, 1.00355)
-sprite_frames = SubResource("SpriteFrames_w3tr7")
+sprite_frames = SubResource("SpriteFrames_dkv7a")
 autoplay = "default"
-frame_progress = 0.259141
+frame_progress = 0.737132
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-2, -5)
+position = Vector2(-24.5, 23.5)
 shape = SubResource("RectangleShape2D_6irrw")
