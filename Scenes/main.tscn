@@ -1,16 +1,13 @@
 [gd_scene load_steps=6 format=3 uid="uid://diyi00raf0koe"]
 
+[ext_resource type="Script" path="res://Scripts/game_manager.gd" id="1_2i1uf"]
 [ext_resource type="PackedScene" uid="uid://bljx6gjtah5uo" path="res://Scenes/shark.tscn" id="1_r5b3f"]
 [ext_resource type="PackedScene" uid="uid://dogt7pprb86gb" path="res://Scenes/environment.tscn" id="2_i3uq4"]
 [ext_resource type="PackedScene" uid="uid://dr1qxofm2sjab" path="res://Scenes/pause_screen.tscn" id="4_7cvdj"]
-[ext_resource type="Script" path="res://Scenes/pause_screen.gd" id="5_ulavw"]
-
-[sub_resource type="GDScript" id="GDScript_o3f4q"]
-script/source = "extends Node
-"
+[ext_resource type="Script" path="res://Scripts/pause_screen.gd" id="5_ulavw"]
 
 [node name="Game" type="Node"]
-script = SubResource("GDScript_o3f4q")
+script = ExtResource("1_2i1uf")
 
 [node name="Environment" parent="." instance=ExtResource("2_i3uq4")]
 position = Vector2(-170, 32)
@@ -24,3 +21,9 @@ position = Vector2(451, 390)
 process_mode = 3
 visible = false
 script = ExtResource("5_ulavw")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 60.0
+autostart = true
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
