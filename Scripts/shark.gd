@@ -10,8 +10,8 @@ func get_input():
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
-	if not is_on_floor():
-		velocity += get_gravity() * delta
+	#if not is_on_floor():
+		#velocity += get_gravity() * delta
 	get_input()
 	move_and_slide()
 	# Handle jump.
