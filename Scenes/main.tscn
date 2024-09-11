@@ -1,8 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://diyi00raf0koe"]
+[gd_scene load_steps=7 format=3 uid="uid://diyi00raf0koe"]
 
 [ext_resource type="PackedScene" uid="uid://bljx6gjtah5uo" path="res://Scenes/shark.tscn" id="1_r5b3f"]
 [ext_resource type="PackedScene" uid="uid://dogt7pprb86gb" path="res://Scenes/environment.tscn" id="2_i3uq4"]
 [ext_resource type="PackedScene" uid="uid://dr1qxofm2sjab" path="res://Scenes/pause_screen.tscn" id="4_7cvdj"]
+[ext_resource type="PackedScene" uid="uid://b0xyu1bod8no6" path="res://Scenes/human.tscn" id="5_2eyom"]
 [ext_resource type="Script" path="res://Scenes/pause_screen.gd" id="5_ulavw"]
 
 [sub_resource type="GDScript" id="GDScript_o3f4q"]
@@ -24,3 +25,6 @@ position = Vector2(451, 390)
 process_mode = 3
 visible = false
 script = ExtResource("5_ulavw")
+
+[node name="Human" parent="." instance=ExtResource("5_2eyom")]
+position = Vector2(1317, 631)
