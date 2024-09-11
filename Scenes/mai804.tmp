@@ -21,6 +21,5 @@ visibility_layer = 2
 position = Vector2(451, 390)
 
 [node name="Pause Screen" parent="." instance=ExtResource("4_7cvdj")]
-process_mode = 3
 visible = false
 script = ExtResource("5_ulavw")
