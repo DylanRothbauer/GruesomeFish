@@ -1,6 +1,5 @@
 extends ColorRect
 
-
 var paused = false
 
 # Pull up pause screen and stop time
