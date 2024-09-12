@@ -1,37 +1,34 @@
-[gd_scene load_steps=4 format=3 uid="uid://c3wr10ewl50lo"]
+[gd_scene load_steps=6 format=3 uid="uid://c3wr10ewl50lo"]
 
-[ext_resource type="Texture2D" uid="uid://hvjvjdryhrxs" path="res://Art Assets/Placeholders/GruesomeFishTitlePlaceholder.png" id="1_gxm57"]
+[ext_resource type="Texture2D" uid="uid://dwielmlwdtleq" path="res://Art Assets/Liam/TitleScreen_V1.png" id="1_7341y"]
 [ext_resource type="Script" path="res://Scripts/start.gd" id="2_0ej8g"]
+[ext_resource type="Texture2D" uid="uid://g5vh3pa8qmrf" path="res://Art Assets/Liam/StartCombined_V1.png" id="2_aw0ve"]
 [ext_resource type="Script" path="res://Scripts/quit.gd" id="3_4petn"]
+[ext_resource type="Texture2D" uid="uid://c5g231akus258" path="res://Art Assets/Liam/QuitCombined_V1.png" id="4_gssem"]
 
-[node name="Start Screen" type="ColorRect"]
+[node name="Start Screen" type="TextureRect"]
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-color = Color(0.737255, 0, 0, 1)
+texture = ExtResource("1_7341y")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="ButtonVBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 2
-offset_left = 240.0
-offset_top = 44.5
-offset_right = 1680.0
-offset_bottom = 1035.5
+offset_left = 1270.0
+offset_top = 651.0
+offset_right = 2710.0
+offset_bottom = 1642.0
+scale = Vector2(0.8, 0.8)
 
-[node name="Title" type="TextureRect" parent="VBoxContainer"]
+[node name="Start" type="TextureButton" parent="ButtonVBoxContainer"]
 layout_mode = 2
-texture = ExtResource("1_gxm57")
-
-[node name="Start" type="Button" parent="VBoxContainer"]
-layout_mode = 2
-theme_override_font_sizes/font_size = 100
 button_mask = 5
-text = "Start"
+texture_normal = ExtResource("2_aw0ve")
 script = ExtResource("2_0ej8g")
 
-[node name="Quit" type="Button" parent="VBoxContainer"]
+[node name="Quit" type="TextureButton" parent="ButtonVBoxContainer"]
 layout_mode = 2
-theme_override_font_sizes/font_size = 80
-text = "Quit"
+texture_normal = ExtResource("4_gssem")
 script = ExtResource("3_4petn")
