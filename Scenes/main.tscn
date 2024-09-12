@@ -5,7 +5,16 @@
 [ext_resource type="PackedScene" uid="uid://dogt7pprb86gb" path="res://Scenes/environment.tscn" id="2_i3uq4"]
 [ext_resource type="PackedScene" uid="uid://dr1qxofm2sjab" path="res://Scenes/pause_screen.tscn" id="4_7cvdj"]
 [ext_resource type="PackedScene" uid="uid://b0xyu1bod8no6" path="res://Scenes/human.tscn" id="5_2eyom"]
-[ext_resource type="Script" path="res://Scenes/game_manager.gd" id="6_wbggq"]
+
+[sub_resource type="GDScript" id="GDScript_uip2w"]
+script/source = "extends Node
+
+@onready var label = %Label
+@onready var timer = %Timer
+
+
+	
+"
 
 [node name="Game" type="Node"]
 script = ExtResource("1_2i1uf")
@@ -25,6 +34,7 @@ autostart = true
 
 [node name="Human" parent="." instance=ExtResource("5_2eyom")]
 position = Vector2(1317, 631)
+script = null
 
 [node name="Pause Screen" parent="." instance=ExtResource("4_7cvdj")]
 process_mode = 3
@@ -55,6 +65,6 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="Game Manager" type="Node" parent="."]
-script = ExtResource("6_wbggq")
+script = SubResource("GDScript_uip2w")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
