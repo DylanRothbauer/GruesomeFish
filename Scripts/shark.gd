@@ -34,4 +34,4 @@ func _physics_process(delta: float) -> void:
 	
 	# Flip sprite if player goes left
 	var isLeft = velocity.x < 0
-	animatedShark.flip_h = isLeft
+	animatedShark.flip_h = !isLeft

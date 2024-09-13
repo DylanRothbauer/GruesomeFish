@@ -167,6 +167,7 @@ script = ExtResource("1_7qyln")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
 texture_filter = 1
 position = Vector2(0, 6)
 scale = Vector2(1, 1.00355)
@@ -188,3 +189,5 @@ spread = 77.73
 gravity = Vector2(250, 0)
 linear_accel_min = 58.58
 linear_accel_max = 92.93
+
+[node name="Dash Timer" type="Timer" parent="."]
