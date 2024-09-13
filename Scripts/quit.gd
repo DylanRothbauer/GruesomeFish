@@ -1,5 +1,5 @@
-extends Button
+extends TextureButton
 
 # Quit program when quit button is pressed.
 func _pressed() -> void:
-	get_tree().quit
+	get_tree().quit()

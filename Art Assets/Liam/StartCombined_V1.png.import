@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ch0iveplykf43"
-path="res://.godot/imported/GruesomeFishStartPlaceholder.png-c9d406f4d2de1660328070614fcbfc63.ctex"
+uid="uid://g5vh3pa8qmrf"
+path="res://.godot/imported/StartCombined_V1.png-82710be0a568378ba499484af1401da7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Art Assets/Placeholders/GruesomeFishStartPlaceholder.png"
-dest_files=["res://.godot/imported/GruesomeFishStartPlaceholder.png-c9d406f4d2de1660328070614fcbfc63.ctex"]
+source_file="res://Art Assets/Liam/StartCombined_V1.png"
+dest_files=["res://.godot/imported/StartCombined_V1.png-82710be0a568378ba499484af1401da7.ctex"]
 
 [params]
 

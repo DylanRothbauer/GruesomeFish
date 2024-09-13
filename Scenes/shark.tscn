@@ -161,7 +161,10 @@ animations = [{
 size = Vector2(317, 73)
 
 [node name="Shark" type="CharacterBody2D"]
+y_sort_enabled = true
 script = ExtResource("1_7qyln")
+
+[node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1

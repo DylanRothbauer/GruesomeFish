@@ -1,4 +1,4 @@
-extends Button
+extends TextureButton
 
 # Load main scene when button is pressed
 func _pressed() -> void:
