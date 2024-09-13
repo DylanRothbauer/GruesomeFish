@@ -8,10 +8,6 @@
 atlas = ExtResource("1_nx4kq")
 region = Rect2(0, 1200, 700, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1lhl6"]
-atlas = ExtResource("1_nx4kq")
-region = Rect2(700, 1600, 700, 400)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_npiyt"]
 atlas = ExtResource("1_nx4kq")
 region = Rect2(0, 1600, 700, 400)
@@ -43,6 +39,10 @@ region = Rect2(700, 800, 700, 400)
 [sub_resource type="AtlasTexture" id="AtlasTexture_g3fjv"]
 atlas = ExtResource("1_nx4kq")
 region = Rect2(700, 1200, 700, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1lhl6"]
+atlas = ExtResource("1_nx4kq")
+region = Rect2(700, 1600, 700, 400)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ddu7n"]
 atlas = ExtResource("3_44bfi")
@@ -87,9 +87,6 @@ animations = [{
 "texture": SubResource("AtlasTexture_ya5sm")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1lhl6")
-}, {
-"duration": 1.0,
 "texture": SubResource("AtlasTexture_npiyt")
 }, {
 "duration": 1.0,
@@ -112,8 +109,11 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_g3fjv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1lhl6")
 }],
-"loop": true,
+"loop": false,
 "name": &"BLOOD",
 "speed": 13.0
 }, {
@@ -160,10 +160,10 @@ script = ExtResource("1_45t8w")
 position = Vector2(-8, -2)
 sprite_frames = SubResource("SpriteFrames_w1o62")
 autoplay = "default"
-frame_progress = 0.462406
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
 shape = SubResource("RectangleShape2D_h4kk1")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="animation_finished" from="AnimatedSprite2D2" to="." method="_on_animated_sprite_2d_2_animation_finished"]
