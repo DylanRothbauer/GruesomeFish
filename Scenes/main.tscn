@@ -67,3 +67,4 @@ script = SubResource("GDScript_uip2w")
 position = Vector2(991, 596)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Human" to="Shark" method="_on_human_body_entered"]

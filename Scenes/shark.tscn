@@ -172,7 +172,8 @@ texture_filter = 1
 position = Vector2(0, 6)
 scale = Vector2(1, 1.00355)
 sprite_frames = SubResource("SpriteFrames_dkv7a")
-animation = &"WetMoving"
+animation = &"DryDefault"
+frame_progress = 0.188157
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-24.5, 23.5)
@@ -191,3 +192,7 @@ linear_accel_min = 58.58
 linear_accel_max = 92.93
 
 [node name="Dash Timer" type="Timer" parent="."]
+
+[node name="Wet Timer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Wet Timer" to="." method="_on_wet_timer_timeout"]
