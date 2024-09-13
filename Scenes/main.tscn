@@ -23,6 +23,7 @@ script = ExtResource("1_2i1uf")
 position = Vector2(-170, 32)
 
 [node name="Shark" parent="." instance=ExtResource("1_r5b3f")]
+unique_name_in_owner = true
 light_mask = 2
 visibility_layer = 2
 position = Vector2(451, 390)
