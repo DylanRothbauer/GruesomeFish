@@ -1,12 +1,8 @@
-[gd_scene load_steps=7 format=3 uid="uid://s88fvt7ce6mr"]
+[gd_scene load_steps=6 format=3 uid="uid://52r7fa23n2kg"]
 
+[ext_resource type="Script" path="res://Scenes/arm.gd" id="1_b77px"]
 [ext_resource type="Texture2D" uid="uid://bjxd5vuw8r8fk" path="res://Art Assets/Matthias/Object_Arm_v02_VanHornMatthias.png" id="1_kcaff"]
 [ext_resource type="Texture2D" uid="uid://uyjn04yccf4y" path="res://Art Assets/Matthias/Particle Assets/Blood_Particles_06_v01_VanHornMatthias.png" id="2_whxei"]
-
-[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_q0bdq"]
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_srcwy"]
-radius = 28.2843
 
 [sub_resource type="Curve" id="Curve_kyfkm"]
 max_value = 100.0
@@ -18,17 +14,11 @@ offsets = PackedFloat32Array(0, 0.806667)
 colors = PackedColorArray(1, 0, 0, 1, 0.449448, 0, 0.114171, 1)
 
 [node name="Arm" type="Node2D"]
+script = ExtResource("1_b77px")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture_filter = 1
 texture = ExtResource("1_kcaff")
-
-[node name="RigidBody2D" type="RigidBody2D" parent="."]
-physics_material_override = SubResource("PhysicsMaterial_q0bdq")
-gravity_scale = 0.0
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
-shape = SubResource("CircleShape2D_srcwy")
 
 [node name="CPUParticles2D" type="CPUParticles2D" parent="."]
 texture_filter = 1

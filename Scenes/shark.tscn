@@ -172,14 +172,8 @@ texture_filter = 1
 position = Vector2(0, 6)
 scale = Vector2(1, 1.00355)
 sprite_frames = SubResource("SpriteFrames_dkv7a")
-<<<<<<< HEAD
-animation = &"DryDefault"
-frame_progress = 0.188157
-=======
 animation = &"WetMoving"
 autoplay = "WetMoving"
-frame_progress = 0.205589
->>>>>>> 5ab4b73739cb48983649c2fa0d870ca4150689a1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(-24.5, 23.5)
