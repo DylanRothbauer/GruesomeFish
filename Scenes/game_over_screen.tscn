@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c7kb60s2ix6cf"]
 
-[ext_resource type="Script" path="res://Scenes/main_menu_button.gd" id="1_27ilm"]
+[ext_resource type="Script" path="res://Scripts/main_menu_button.gd" id="1_8apd8"]
 
 [node name="GameOverScreen" type="ColorRect"]
 anchors_preset = 15
@@ -33,4 +33,4 @@ text = "GAME OVER"
 layout_mode = 2
 theme_override_font_sizes/font_size = 60
 text = "Main Menu"
-script = ExtResource("1_27ilm")
+script = ExtResource("1_8apd8")

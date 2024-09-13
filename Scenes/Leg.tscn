@@ -1,0 +1,47 @@
+[gd_scene load_steps=6 format=3 uid="uid://cak4eqfafo131"]
+
+[ext_resource type="Texture2D" uid="uid://bq7j6s418ebj5" path="res://Art Assets/Matthias/Object_Leg_v01_VanHornMatthias.png" id="1_nl6xh"]
+[ext_resource type="Texture2D" uid="uid://uyjn04yccf4y" path="res://Art Assets/Matthias/Particle Assets/Blood_Particles_06_v01_VanHornMatthias.png" id="2_58dsw"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hlw85"]
+radius = 32.0156
+
+[sub_resource type="Curve" id="Curve_pkyjy"]
+max_value = 100.0
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.988764, 6.59341), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Gradient" id="Gradient_mlmpu"]
+offsets = PackedFloat32Array(0, 0.806667)
+colors = PackedColorArray(1, 0, 0, 1, 0.449448, 0, 0.114171, 1)
+
+[node name="Leg" type="Node2D"]
+position = Vector2(-1, -1)
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_nl6xh")
+
+[node name="RigidBody2D" type="RigidBody2D" parent="."]
+gravity_scale = 0.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="RigidBody2D"]
+shape = SubResource("CircleShape2D_hlw85")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+texture_filter = 1
+position = Vector2(26, -34)
+amount = 20
+lifetime = 2.0
+texture = ExtResource("2_58dsw")
+emission_shape = 1
+emission_sphere_radius = 19.1
+gravity = Vector2(0, 0)
+initial_velocity_min = 30.3
+initial_velocity_max = 111.11
+damping_min = 31.313
+damping_max = 31.313
+damping_curve = SubResource("Curve_pkyjy")
+scale_amount_min = 0.5
+scale_amount_max = 1.5
+color_ramp = SubResource("Gradient_mlmpu")
