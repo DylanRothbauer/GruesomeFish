@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://b0xyu1bod8no6"]
+[gd_scene load_steps=26 format=3 uid="uid://b0xyu1bod8no6"]
 
 [ext_resource type="Script" path="res://Scripts/human.gd" id="1_45t8w"]
 [ext_resource type="Texture2D" uid="uid://fre5t1wcjxxl" path="res://Art Assets/Haty/bloodsplosiin.png" id="1_nx4kq"]
@@ -153,6 +153,9 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_h4kk1"]
 size = Vector2(170, 220.5)
 
+[sub_resource type="CircleShape2D" id="CircleShape2D_2r324"]
+radius = 7.93979
+
 [node name="Human" type="Area2D"]
 script = ExtResource("1_45t8w")
 
@@ -165,5 +168,14 @@ autoplay = "default"
 y_sort_enabled = true
 shape = SubResource("RectangleShape2D_h4kk1")
 
+[node name="Detection Area" type="Area2D" parent="CollisionShape2D"]
+scale = Vector2(13.68, 14.84)
+
+[node name="Detection" type="CollisionShape2D" parent="CollisionShape2D/Detection Area"]
+scale = Vector2(1.21074, 1.34554)
+shape = SubResource("CircleShape2D_2r324")
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="animation_finished" from="AnimatedSprite2D2" to="." method="_on_animated_sprite_2d_2_animation_finished"]
+[connection signal="body_entered" from="CollisionShape2D/Detection Area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="CollisionShape2D/Detection Area" to="." method="_on_detection_area_body_exited"]

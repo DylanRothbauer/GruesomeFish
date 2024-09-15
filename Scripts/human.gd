@@ -7,6 +7,9 @@ extends Area2D
 var xScale = 1
 var yScale = 1
 var scalar = 0.5 # Can adjust this when we refine/polish
+var speed = 10
+var shark_chase = false
+var shark = null
 
 func _on_body_entered(body: Node2D) -> void:
 	# Play animation
@@ -34,3 +37,17 @@ func _on_body_entered(body: Node2D) -> void:
 func _on_animated_sprite_2d_2_animation_finished() -> void:
 	# Kill player
 	queue_free()
+
+
+func _on_detection_area_body_entered(body: Node2D) -> void:
+	shark = body
+	shark_chase = true
+
+
+func _on_detection_area_body_exited(body: Node2D) -> void:
+	shark = null
+	shark_chase = false 
+
+func _physics_process(delta):
+	if shark_chase:
+		position += (shark.position + position)/speed
