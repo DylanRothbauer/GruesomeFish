@@ -71,4 +71,7 @@ vertical_alignment = 1
 [node name="Game Manager" type="Node" parent="."]
 script = SubResource("GDScript_uip2w")
 
+[node name="Human" parent="." instance=ExtResource("5_2eyom")]
+position = Vector2(135, -37)
+
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
