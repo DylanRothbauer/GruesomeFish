@@ -33,10 +33,6 @@ unique_name_in_owner = true
 wait_time = 60.0
 autostart = true
 
-[node name="Human" parent="." instance=ExtResource("5_2eyom")]
-position = Vector2(1317, 631)
-script = null
-
 [node name="Pause Screen" parent="." instance=ExtResource("4_7cvdj")]
 process_mode = 3
 visible = false
@@ -71,7 +67,8 @@ vertical_alignment = 1
 [node name="Game Manager" type="Node" parent="."]
 script = SubResource("GDScript_uip2w")
 
-[node name="Human" parent="." instance=ExtResource("5_2eyom")]
+[node name="Human2" parent="." instance=ExtResource("5_2eyom")]
 position = Vector2(135, -37)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Human2" to="Shark" method="_on_human_2_body_entered"]
