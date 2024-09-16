@@ -1,8 +1,9 @@
-[gd_scene load_steps=26 format=3 uid="uid://b0xyu1bod8no6"]
+[gd_scene load_steps=36 format=3 uid="uid://b0xyu1bod8no6"]
 
 [ext_resource type="Script" path="res://Scripts/human.gd" id="1_45t8w"]
 [ext_resource type="Texture2D" uid="uid://fre5t1wcjxxl" path="res://Art Assets/Haty/bloodsplosiin.png" id="1_nx4kq"]
 [ext_resource type="Texture2D" uid="uid://bu0a1dmrpvfl4" path="res://Art Assets/Haty/Human_Surfer.png" id="3_44bfi"]
+[ext_resource type="Texture2D" uid="uid://croa13t0bn8w7" path="res://Art Assets/Haty/Human_Beachgoer.png" id="3_n7dxl"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ya5sm"]
 atlas = ExtResource("1_nx4kq")
@@ -43,6 +44,42 @@ region = Rect2(700, 1200, 700, 400)
 [sub_resource type="AtlasTexture" id="AtlasTexture_1lhl6"]
 atlas = ExtResource("1_nx4kq")
 region = Rect2(700, 1600, 700, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7e36m"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(0, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_drk7y"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(300, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxtji"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(600, 0, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dehsk"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(0, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dmqm1"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(300, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hp127"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(600, 300, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ybay"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(0, 600, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u6h0i"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(300, 600, 300, 300)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wqo5p"]
+atlas = ExtResource("3_n7dxl")
+region = Rect2(600, 600, 300, 300)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_ddu7n"]
 atlas = ExtResource("3_44bfi")
@@ -119,6 +156,38 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_7e36m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_drk7y")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxtji")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dehsk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dmqm1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hp127")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ybay")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u6h0i")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wqo5p")
+}],
+"loop": true,
+"name": &"beachgoer",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_ddu7n")
 }, {
 "duration": 1.0,
@@ -157,12 +226,14 @@ size = Vector2(170, 220.5)
 radius = 7.93979
 
 [node name="Human" type="Area2D"]
+scale = Vector2(0.670468, 0.640708)
 script = ExtResource("1_45t8w")
 
 [node name="AnimatedSprite2D2" type="AnimatedSprite2D" parent="."]
 position = Vector2(-8, -2)
 sprite_frames = SubResource("SpriteFrames_w1o62")
 autoplay = "default"
+frame_progress = 0.528682
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 y_sort_enabled = true
