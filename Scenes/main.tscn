@@ -56,13 +56,6 @@ unique_name_in_owner = true
 wait_time = 60.0
 autostart = true
 
-[node name="Pause Screen" parent="." instance=ExtResource("4_7cvdj")]
-process_mode = 3
-visible = false
-top_level = false
-size_flags_horizontal = 1
-size_flags_vertical = 1
-
 [node name="UI" type="CanvasLayer" parent="."]
 
 [node name="Panel" type="Panel" parent="UI"]
@@ -86,6 +79,13 @@ theme_override_font_sizes/font_size = 25
 text = "Timer: "
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="Pause Screen" parent="UI" instance=ExtResource("4_7cvdj")]
+process_mode = 3
+visible = false
+top_level = false
+size_flags_horizontal = 1
+size_flags_vertical = 1
 
 [node name="Game Manager" type="Node" parent="."]
 script = SubResource("GDScript_uip2w")
