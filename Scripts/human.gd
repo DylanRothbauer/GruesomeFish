@@ -62,5 +62,6 @@ func _process(delta: float) -> void:
 		var random_x = randf_range(0, 50)
 		var random_y = randf_range(0, 50)
 		var new_human = human_scene.instantiate()
+		new_human = position
 		get_parent().add_child(new_human)
 		human_exists = true
