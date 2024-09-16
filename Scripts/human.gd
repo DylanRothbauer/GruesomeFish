@@ -36,6 +36,7 @@ func _on_body_entered(body: Node2D) -> void:
 	# Set the arm to move in a random direction
 	var random_direction = Vector2(randf_range(-1, 1), randf_range(-1, 1)).normalized() * randf_range(100, 200)
 	arm.set("random_direction", random_direction) # Pass the random direction to the arm
+	human_exists = false
 
 func _on_animated_sprite_2d_2_animation_finished() -> void:
 	# Kill player
@@ -59,8 +60,12 @@ func _physics_process(delta):
 #respawn code - to be fixed. 
 func _process(delta: float) -> void:
 	if not human_exists:
-		var random_x = randf_range(0, 50)
-		var random_y = randf_range(0, 50)
+		# Feel free to adjust ranges
+		var random_x = randf_range(10, 500)
+		var random_y = randf_range(10, 500)
 		var new_human = human_scene.instantiate()
 		get_parent().add_child(new_human)
+		new_human.position = self.position
+		new_human.position.x = random_x
+		new_human.position.y = random_y
 		human_exists = true

@@ -20,17 +20,17 @@ script/source = "extends Node
 script = ExtResource("1_2i1uf")
 
 [node name="Environment" parent="." instance=ExtResource("2_i3uq4")]
-position = Vector2(-170, 32)
+position = Vector2(-848, 1807)
 
 [node name="Shark" parent="." instance=ExtResource("1_r5b3f")]
 light_mask = 2
 visibility_layer = 2
 y_sort_enabled = false
-position = Vector2(451, 390)
+position = Vector2(501, 440)
 
 [node name="Timer" type="Timer" parent="."]
 unique_name_in_owner = true
-wait_time = 60.0
+wait_time = 10.0
 autostart = true
 
 [node name="Pause Screen" parent="." instance=ExtResource("4_7cvdj")]
