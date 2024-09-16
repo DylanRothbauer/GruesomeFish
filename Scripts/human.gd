@@ -7,7 +7,7 @@ extends Area2D
 var human_scene = preload("res://Scenes/human.tscn")
 var xScale = 1
 var yScale = 1
-var scalar = 0.5 # Can adjust this when we refine/polish
+var scalar = 0.1 # Can adjust this when we refine/polish
 var count = 0
 var speed = 10
 var shark_chase = false
