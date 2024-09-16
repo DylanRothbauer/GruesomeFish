@@ -44,10 +44,12 @@ func _physics_process(delta: float) -> void:
 	# Set sprite based on wetness and if it's moving
 	if is_wet:
 		animatedShark.play("WetDefault")
-		if velocity >= Vector2(0, 0):
+		if velocity > Vector2(0, 0) or velocity < Vector2(0, 0):
 			animatedShark.play("WetMoving") 
 	else:
 		animatedShark.play("DryDefault")
+		if velocity > Vector2(0, 0) or velocity < Vector2(0, 0):
+			animatedShark.play("DryMovign")
 
 
 func _on_human_body_entered(body: Node2D) -> void:
