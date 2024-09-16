@@ -223,7 +223,7 @@ animations = [{
 size = Vector2(170, 220.5)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_2r324"]
-radius = 7.93979
+radius = 17.8342
 
 [node name="Human" type="Area2D"]
 scale = Vector2(0.670468, 0.640708)

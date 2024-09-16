@@ -55,8 +55,16 @@ func _on_detection_area_body_exited(body: Node2D) -> void:
 func _physics_process(delta):
 	if shark_chase and count <= 2:
 		position += (shark.position + position)/speed
+		
+#respawn code - to be fixed.
+#func _process(delta):
+	#if shark != null:
+		#var new_obj = human_scene.instantiate()
+		#new_obj.position = position
+		#get_parent().add_child(new_obj)
+		#shark = new_obj
 
-#respawn code - to be fixed. 
+ 
 func _process(delta: float) -> void:
 	if not human_exists:
 		var random_x = randf_range(0, 50)
