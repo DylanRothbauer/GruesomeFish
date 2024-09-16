@@ -74,3 +74,4 @@ position = Vector2(135, -37)
 position = Vector2(-432, -42)
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="body_entered" from="Human2" to="Shark" method="_on_human_2_body_entered"]
