@@ -72,7 +72,7 @@ func _process(delta: float) -> void:
 		var random_x = randf_range(10, 500)
 		var random_y = randf_range(10, 500)
 		var new_human = human_scene.instantiate()
-		new_human = position
+		new_human.position = self.position
 		get_parent().add_child(new_human)
 		new_human.position = self.position
 		new_human.position.x = random_x
