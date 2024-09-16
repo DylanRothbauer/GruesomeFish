@@ -61,3 +61,8 @@ func _on_wet_timer_timeout() -> void:
 func _on_human_2_body_entered(body: Node2D) -> void:
 	is_wet = true
 	wet_timer.start(3.0)
+
+
+func _on_static_body_2d_2_body_entered(body: Node2D) -> void:
+	get_tree().change_scene_to_file("res://Scenes/game_win_screen.tscn")
+	
