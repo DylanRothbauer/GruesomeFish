@@ -57,7 +57,7 @@ You can play **Gruesome Fish** directly in your browser! Check out our live Itch
 ## 👩‍💻 Team
 - Matthias Van Horn - **Artist**
 - Haty Johansen - **Artist**
-- 
+- Liam Neary - **Artist**
 - Dylan Rothbauer - **Programmer**
 - Riley DuLak - **Programmer**
 - Joe Luther - **Programmer**
